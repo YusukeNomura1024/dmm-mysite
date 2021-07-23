@@ -2,8 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/c8b94e776f.js" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>mysite</title>
   <link rel="stylesheet" href="style.css">
 
@@ -13,12 +14,20 @@
   <header>
     <div class="h-group">
     <img src="img/logo.png">
+    <div class="nav_toggle_box">
+      <span class="nav_toggle">
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+    </div>
+    
     <nav>
       <ul class="nav">
-        <li>Portfolio</li>
-        <li>Feature</li>
-        <li>Profile</li>
-        <li>Contact</li>
+        <li class="nav_menu_li">Portfolio</li>
+        <li class="nav_menu_li">Feature</li>
+        <li class="nav_menu_li">Profile</li>
+        <li class="nav_menu_li">Contact</li>
       </ul>
     </nav>
     </div>
@@ -144,5 +153,15 @@
 
   </main>
 
+  <footer>
+    <p class="copy-write">©︎ 2017 WebCamp</p>
+  </footer>
+
+  <script type="text/javascript">
+  $('.nav_toggle').on('click', function () {
+    $('.nav_toggle, .nav, .nav_toggle_box').toggleClass('show');
+  });
+
+    </script>
 </body>
 </html>
